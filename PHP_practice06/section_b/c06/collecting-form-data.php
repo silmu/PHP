@@ -1,7 +1,14 @@
 <?php include 'includes/header.php'; ?>
+<?php 
+  $values = [];
+  $name = isset($_POST["name"]) ? $_POST["name"] : '';
 
+  foreach($_POST as $key => $value){
+    array_unshift($values, [$key => $value]);
+  }
+?>
 
-<form>
+<form method="post">
   <p>Name: <input type="text" name="name"></p>
   <p>Age: <input type="text" name="age"></p>
   <p>Email: <input type="text" name="email"></p>
@@ -21,6 +28,14 @@
   <p><input type="submit" value="Save"></p>
 </form>
 
-<pre><?php var_dump($_POST); ?></pre>
+
+<?php
+  foreach($values as $key=>$value){
+    foreach($value as $name => $content){
+      echo "<p>". ucfirst($name) . ": $content</p>";
+    }
+  }
+?>
+
 
 <?php include 'includes/footer.php'; ?>

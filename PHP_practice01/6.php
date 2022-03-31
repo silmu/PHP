@@ -13,15 +13,14 @@
 
   <article class="main-content col-xs-8">
 
-
+    <form action="6.php" method="post">
+      <p><label for="input">Add some text:</label></p>
+      <p><input type="text" name="input" id="input"></p>
+      <p><input type="submit" value="Submit"></p>
+    </form>
     <?php
-
-		/*  Step1: Make a form that submits one value to POST super global
-
-
- */
-
-
+      $input = $_POST["input"];
+      echo $input;
 		?>
 
 

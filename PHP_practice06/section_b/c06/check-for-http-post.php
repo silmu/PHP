@@ -1,7 +1,7 @@
 <?php include 'includes/header.php'; ?>
 
 <?php
-// Write PHP Code here
+    echo $_SERVER["REQUEST_METHOD"];
 ?>
 
 <?php include 'includes/footer.php'; ?>

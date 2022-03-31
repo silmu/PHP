@@ -1,4 +1,4 @@
-<?php declare(strict_types=1);
+<?php 
     // date_default_timezone_set('Europe/Helsinki');
     // $t=date("H:i:s");
     // echo "Time now is $t<br>";
@@ -53,3 +53,54 @@
     // }
 
     // echo sum(5, 6);
+
+    //Mathematical functions
+    echo pow(2, 4) . "<br>";
+    echo 2 ** 4 . "<br>";
+    echo rand(1, 5). "<br>";
+    echo sqrt(3) . "<br>";
+    echo ceil(4.6) . "<br>";
+    echo floor(4.6) . "<br>";
+    echo abs(-4.6) . "<br>";
+    //Decimal in binary
+    echo decbin(46) . "<br>";
+
+    //String functions
+    //Gey length
+    $str = 'abcdef';
+    echo $str . " length is " . strlen($str) . "<br>";
+    //Checks if string ends with a substring
+    str_ends_with('The lazy fox jumped over the fence', 'fence');
+    //Splits string into array by number of chars
+    $str = "Hello Friend";
+
+    $arr1 = str_split($str);
+    $arr2 = str_split($str, 3);
+
+
+    print_r($arr1);
+    echo "<br>";
+    print_r($arr2);
+    echo "<br>";
+
+    //Alternative to echo
+    //The major differences to echo are that print only accepts a single argument and always returns 1.
+    print('Print function') . "<br>";
+
+    //Array functions.php
+    //array_pop() pops and returns the value of the last element of array, shortening the array by one element.
+    $stack = array("orange", "banana", "apple", "raspberry");
+    $fruit = array_pop($stack);
+    print_r($stack);
+    echo "<br>";
+
+    //map
+    function cube($n)
+    {
+        return ($n * $n * $n);
+    }
+
+    $a = [1, 2, 3, 4, 5];
+    $b = array_map('cube', $a);
+    print_r($b);
+    echo "<br>";

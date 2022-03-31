@@ -25,6 +25,18 @@
 
  */
 
+ echo 4 ** 3 . "<br>";
+ echo strlen("Hello, world!") . "<br>";
+
+ $arr = [1, 2, 3, 4];
+ array_push($arr, 5);
+ print_r($arr);
+ echo "<br>";
+
+ array_pop($arr);
+ print_r($arr);
+ echo "<br>";
+
 	
 ?>
 
