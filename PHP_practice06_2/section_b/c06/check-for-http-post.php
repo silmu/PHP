@@ -29,7 +29,7 @@ if($_SERVER['REQUEST_METHOD'] = 'GET'){
 
 ?>
 
-<form  method="POST">
+<form action="./check-for-http-get.php" method="POST">
   <input type="text" name="input"></input>
   <button type="submit">Submit</button>
 </form>

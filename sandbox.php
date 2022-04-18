@@ -118,28 +118,29 @@
         <!-- <a href="sandbox.php?id=<?=$id ?>"><?=$button?></a>
 
         <li> -->
-<?php
-    class Fruit {
-        //Properties
-        public $name;
-        public $color;
+<!-- <?php
+    // class Fruit {
+    //     //Properties
+    //     public $name;
+    //     public $color;
         
-        //Methods
-        function set_name($name){
-            $this->name = $name;
-        }
+    //     //Methods
+    //     function set_name($name){
+    //         $this->name = $name;
+    //     }
         
-        function get_name(){
-            return $this->name;
-        }
-    }
+    //     function get_name(){
+    //         return $this->name;
+    //     }
+    // }
 
-    $apple = new Fruit();
-    $apple->set_name('Banana');
+    // $apple = new Fruit();
+    // $apple->set_name('Banana');
 
-    echo $apple->get_name();
+    // echo $apple->get_name();
 
-    $apple->set_name('Orange');
+    // $apple->set_name('Orange');
 
-    echo $apple->get_name();
-?>
+    // echo $apple->get_name();
+?> -->
+

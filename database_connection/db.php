@@ -6,10 +6,23 @@
         }
     }
 
+
     //Inserting new user and password
     if(isset($_POST['submit'])){
         $username = $_POST['username'];
         $password = $_POST['password'];
+
+          //Sanitaze username and password by escaping special characters
+        // $username = mysqli_real_escape_string($connection, $username);
+        // $password = mysqli_real_escape_string($connection, $password);
+
+        //Password encryption algorithm
+        $hashFormat = '2a$07$';
+        $salt = 'whatever$';
+        $hashFormatAndSalt = $hashFormat . $salt;
+        $password = crypt($password, $hashFormatAndSalt);
+
+        echo $password;
 
         if($username && $password){
             //Insert data into database
@@ -22,6 +35,8 @@
             echo 'Please enter your username and password';
         }
     }
+
+
 
     //Update user and password
     if(isset($_POST['update'])){
@@ -36,9 +51,8 @@
             $query .= "WHERE id = $id";
 
             $result = mysqli_query($connection, $query);
-            if(!$result) {
-                die('Update query failed');
-            }
+            
+            queryResult($result, 'Update');
             
         } else {
             echo 'Please enter your username and password';
@@ -52,9 +66,8 @@
         $query .= " WHERE id = {$_POST['id']}";
 
         $result = mysqli_query($connection, $query);
-            if(!$result) {
-                die('Delete query failed');
-            }
+        
+        queryResult($result, 'Delete');
     }
 
 

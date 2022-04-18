@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('https://images.unsplash.com/photo-1524578578324-1df5c6632360?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1712&q=80');
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  background: linear-gradient(slateblue, rgb(98, 84, 192));
+  color: white;
+  padding: 1rem;
+}
+
+main {
+  background: linear-gradient(white, rgba(255, 255, 255, 0.5));
+  backdrop-filter: blur(3px);
+  height: 100vh;
+  padding: 1rem;
+}
+
+h2 {
+  padding: 0.5rem;
+}
+/* Style for create_db file  message*/
+.connection {
+  padding: 0.5rem;
+  color: gray;
+}
+
+/* Add a task */
+.container-add-task {
+  padding: 0 0.5rem;
+}
+
+input[type='text'] {
+  margin: 0.5em 0;
+  padding: 0.8em;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  display: inline-block;
+  width: 290px;
+}
+
+/* Tasks */
+.tasks {
+  list-style-type: none;
+  padding: 0.5em;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  background-color: white;
+  margin: 0.5em;
+  width: 290px;
+}
+
+/* Buttons */
+#btn-add,
+#btn-done {
+  padding: 0.5rem 1em;
+  margin: 1rem 0.5em;
+  background: linear-gradient(rgb(84, 70, 170), slateblue);
+  border: 1px solid slateblue;
+  border-radius: 2rem;
+  color: white;
+  box-shadow: 1px 1px 1px rgb(74, 59, 170, 0.5);
+}
+
+#btn-add:hover,
+#btn-done:hover {
+  filter: brightness(93%);
+}
+
+/* Finished tasks */
+.finished-tasks {
+  padding: 0.5rem;
+}
